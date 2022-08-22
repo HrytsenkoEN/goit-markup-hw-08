@@ -4,26 +4,37 @@
     --accent-color:#2196F3;
     --button-bg-color:#F5F4FA;
     --primary-wite-color:#ffffff; 
-    --secondary-background: #2F303A;
+    --secondary-background-color: #2F303A;
+    --primary-black-color: #000000;
+    --primary-bg-color:#F5F5F5;
 }
 
-/* background #F5F5F5*/
-/* */
-/* 
-/* black #000000*/
-
+/* body */
 .page {
-    background-color:#F5F5F5;
+    background-color:var(--primary-bg-color);
     color:var(--primary-text-color);
-    font-family: roboto;
+    font-family: 'Roboto', sans-serif;
+    letter-spacing: 0.03em;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.71;
 }
 
-ul {
+.list,
+.projects-list,
+.feature-list,
+.work-list,
+.team-list {
     list-style: none;
 }
 
 .logo {
-    color: var(--primary-text-color);
+    color: var(--primary-black-color);
+    font-family: 'releway', sans-serif;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.19;
+    text-decoration: none;
 }
 .logo .web {
     color: var(--accent-color);
@@ -32,6 +43,11 @@ ul {
 
 .site-nav .link{
     color:var(--title-text-color);
+
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    text-decoration: none;
 }
 .site-nav .link.current {
     color: var(--accent-color);
@@ -44,25 +60,74 @@ ul {
 
 .site-auth .link {
     color: var(--title-text-color);
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    text-decoration: none;
 }
 
 .site-auth .link:hover,
 .site-auth .link:focus {
     color:var(--accent-color);
 }
+.link {
+    letter-spacing: 0.02em;
+}
 
 /* Hero */
 .hero {
-    background-color: var(--secondary-background);
+    background-color: var(--secondary-background-color);
+    
 }
 .hero .title {
     color: var(--primary-wite-color);
+    letter-spacing: 0.06em;
+    font-weight: 900;
+    font-size: 44px;
+    line-height: 1.36;
+    text-align: center;
+        text-transform: uppercase;
 }
 /* section */
 .section .title {
     color:var(--title-text-color);
+    
 }
- /* button */
+.section .name {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+}
+
+.feature-list .title {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+}
+
+.section .work,
+.section .team {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.16;
+    text-align: center;
+}
+.projects-list .title {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 2;
+}
+.projects-list .text {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.87;
+}
+.team-list .text {
+    font-weight: 400;
+        font-size: 16px;
+        line-height: 1.18;
+}
+/* button */
  .button {
     color: var(--primary-text-color);
     background-color: var(--button-bg-color);
@@ -72,7 +137,13 @@ ul {
  .button.primary {
     background-color: var(--accent-color);
     color: var(--primary-wite-color);
-    
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.88;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.06em;
  }
  .button.secondary {
     color: var(--title-text-color);
@@ -87,12 +158,12 @@ ul {
  /* Footer*/
 
  footer {
-    background: var(--secondary-background);
+    background: var(--secondary-background-color);
  }
  address {
      color: var(--primary-wite-color);
  }
 
  address .info {
-     color: #ffffff 60%;
+     color: rgba(255, 255, 255, 0.6);
  }
