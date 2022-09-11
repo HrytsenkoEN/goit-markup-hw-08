@@ -25,7 +25,8 @@
 .projects-list,
 .feature-list,
 .work-list,
-.team-list {
+.team-list,
+.footer-list {
   padding: 0;
   margin: 0;
   list-style: none;
@@ -34,7 +35,7 @@
   display: block;
 
   color: var(--primary-black-color);
-  font-family: "releway", sans-serif;
+  font-family: "Releway", sans-serif;
   font-weight: 700;
   font-size: 26px;
   line-height: 1.19;
@@ -62,16 +63,22 @@
   margin-left: 50px;
 }
 .site-auth {
-  margin-left: auto;
+    margin-left: auto;
+}
+.site-nav .link {
+  color: var(--title-text-color);
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  text-decoration: none;
 }
 
-.site-nav .link,
 .site-auth .link {
   display: block;
   padding-top: 32px;
   padding-bottom: 32px;
 
-  color: var(--title-text-color);
+  color: var(--primary-text-color);
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
@@ -105,6 +112,9 @@
 }
 
 /* Hero */
+.section h1 {
+  display: none;
+}
 .hero {
   background-color: var(--secondary-background-color);
   text-align: center;
@@ -162,7 +172,7 @@ section .container {
   margin-bottom: 10px;
   font-weight: 500;
   font-size: 16px;
-  line-height: 19px;
+  line-height: 1.18;
   text-align: center;
 }
 
@@ -267,12 +277,13 @@ section .container {
   margin-left: 8px;
 }
 .button {
-  color: var(--primary-text-color);
+  font-family: inherit;
+  /* color: var(--primary-text-color); */
   background-color: var(--button-bg-color);
   border: none;
   cursor: pointer;
 }
-.button.primary {
+.hero .button {
   background-color: var(--accent-color);
   color: var(--primary-wite-color);
   font-weight: 700;
@@ -283,13 +294,20 @@ section .container {
   letter-spacing: 0.06em;
   margin-bottom: 200px;
 }
-.button.secondary {
+.hero .button:hover,
+.hero .button:focus {
+  background-color: #188ce8;
+}
+.list .button {
   color: var(--title-text-color);
   background-color: var(--button-bg-color);
   padding: 6px 22px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.62;
 }
-.button.secondary:hover,
-.button.secondary:focus {
+.list .button:hover,
+.list .button:focus {
   color: var(--primary-wite-color);
   background-color: var(--accent-color);
 }
@@ -304,10 +322,22 @@ footer {
   color: var(--primary-wite-color);
   margin-bottom: 20px;
 }
+.footer-list .link {
+  color: var(--primary-text-color);
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  text-decoration: none;
+}
+
 address {
+  font-style: normal;
   color: var(--primary-wite-color);
 }
 
-address .info {
+.footer-list .info {
   color: rgba(255, 255, 255, 0.6);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.71;
 }
