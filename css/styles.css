@@ -93,6 +93,25 @@
   line-height: 1.14;
   text-decoration: none;
 }
+.site-auth .envelope::before {
+  content: "";
+  display: inline-block;
+  margin-right: 10px;
+  width: 16px;
+  height: 12px;
+  background-image: url("../images/antenna.svg");
+  background-size: contain;
+}
+
+.site-auth .smartphone::before {
+  content: "";
+  display: inline-block;
+  margin-right: 10px;
+  width: 10px;
+  height: 16px;
+  background-image: url("../images/antenna.svg");
+  background-size: contain;
+}
 
 .site-nav .link.current {
   color: var(--accent-color);
@@ -129,7 +148,15 @@
 }
 
 .hero {
-  background-color: var(--secondary-background-color);
+  max-width: 1600px;
+  height: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  background-image: linear-gradient(to right,
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)),
+    url("../images/heroimg.svg");
+  background-color: #C4C4C4;
   text-align: center;
   padding: 200px 0;
 }
@@ -184,11 +211,6 @@
   color: var(--title-text-color);
 }
 
-/* .section .team,
-.section .work {
-  margin-bottom: 50px;
-} */
-
 .section .name {
   font-weight: 500;
   font-size: 16px;
@@ -200,6 +222,32 @@
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
+}
+
+.feature-element:before {
+  display: block;
+  content: "";
+  height: 120px;
+  outline: 1px solid black;
+  margin-bottom: 30px;
+  background-size: 70px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: var(--button-bg-color);
+}
+.icon-antenna::before {
+  background-image: url(../images/antenna.svg);
+}
+.icon-clock::before {
+  background-image: url(../images/antenna.svg);
+ 
+}
+.icon-diagram::before {
+  background-image: url(../images/antenna.svg);
+  
+}
+.icon-astronaut::before {
+  background-image: url(../images/antenna.svg);
 }
 
 .work-list,
@@ -277,6 +325,11 @@
   margin-right: 30px;
   margin-bottom: 30px;
   border: 1px solid #eeeeee;
+}
+
+.project-element:hover,
+.project-element:focus {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
 .project-element:nth-child(3n) {
@@ -362,6 +415,7 @@
 .list .button:focus {
   color: var(--primary-wite-color);
   background-color: var(--accent-color);
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 /*----------------------- clients----------------------- */
