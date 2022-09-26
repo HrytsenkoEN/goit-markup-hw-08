@@ -28,7 +28,8 @@
 .work-list,
 .team-list,
 .footer-list,
-.clients-list {
+.clients-list,
+.footer-section {
   padding: 0;
   margin: 0;
   list-style: none;
@@ -92,26 +93,38 @@
   font-size: 14px;
   line-height: 1.14;
   text-decoration: none;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
-.site-auth .envelope::before {
+
+.icon-contacts {
+  margin-right: 10px;
+  fill: var(--primary-text-color);
+}
+
+.site-auth .link:hover .icon-contacts {
+  fill: var(--accent-color);
+}
+/* .site-auth .envelope::before {
   content: "";
   display: inline-block;
   margin-right: 10px;
   width: 16px;
   height: 12px;
-  background-image: url("../images/antenna.svg");
+  background-image: url("../images/svg/envelope.svg");
   background-size: contain;
-}
+} */
 
-.site-auth .smartphone::before {
+/* .site-auth .smartphone::before {
   content: "";
   display: inline-block;
   margin-right: 10px;
   width: 10px;
   height: 16px;
-  background-image: url("../images/antenna.svg");
+  background-image: url("../images/svg/smartphone.svg");
   background-size: contain;
-}
+} */
 
 .site-nav .link.current {
   color: var(--accent-color);
@@ -152,11 +165,13 @@
   height: 600px;
   margin-left: auto;
   margin-right: auto;
-  background-image: linear-gradient(to right,
+  background-image: linear-gradient(
+      to right,
       rgba(47, 48, 58, 0.4),
-      rgba(47, 48, 58, 0.4)),
+      rgba(47, 48, 58, 0.4)
+    ),
     url("../images/heroimg.svg");
-  background-color: #C4C4C4;
+  background-color: #c4c4c4;
   text-align: center;
   padding: 200px 0;
 }
@@ -224,30 +239,17 @@
   line-height: 1.14;
 }
 
-.feature-element:before {
+.icon-feature {
   display: block;
   content: "";
   height: 120px;
+  width: 270px;
   outline: 1px solid black;
   margin-bottom: 30px;
   background-size: 70px;
   background-repeat: no-repeat;
   background-position: center;
   background-color: var(--button-bg-color);
-}
-.icon-antenna::before {
-  background-image: url(../images/antenna.svg);
-}
-.icon-clock::before {
-  background-image: url(../images/antenna.svg);
- 
-}
-.icon-diagram::before {
-  background-image: url(../images/antenna.svg);
-  
-}
-.icon-astronaut::before {
-  background-image: url(../images/antenna.svg);
 }
 
 .work-list,
@@ -329,7 +331,8 @@
 
 .project-element:hover,
 .project-element:focus {
-  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
 .project-element:nth-child(3n) {
@@ -417,32 +420,69 @@
   background-color: var(--accent-color);
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
+/*----------------------- social----------------------- */
 
+.social-icon {
+  width: 20px;
+  height: 20px;
+  fill: currentColor;
+}
+
+.social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--primary-wite-color);
+  width: 44px;
+  height: 44px;
+  border: none;
+  padding: 0;
+  color: #afb1b8;
+}
+.social-list .item + .item {
+  margin-left: 10px;
+}
+.social-link:hover,
+.social-link:focus {
+  background-color: #2196f3;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.social-link:hover .social-icon {
+  fill: var(--primary-wite-color);
+}
+
+.social-list {
+  margin-top: 16px;
+}
 /*----------------------- clients----------------------- */
-/* .title.clients {
- color: #afb1b8;
-} */
+
 .btn-icon {
-width: 41px;
-height: 47px;
+  width: 41px;
+  height: 47px;
+  fill: #afb1b8;
+}
+
+.btn-icon:hover {
+  fill: #2196f3;
 }
 
 .btn-clients {
   width: 170px;
   height: 92px;
   padding: 0 0;
-  border: 1px solid #AFB1B8;
+  border: 1px solid #afb1b8;
   border-radius: 4px;
 }
 
-.clients-list {
+.clients-list,
+.social-list {
   display: flex;
   /* margin-top: 50px; */
 }
 .clients-list .item + .item {
   margin-left: 30px;
 }
-
 
 /*----------------------- Footer-----------------------*/
 
@@ -475,4 +515,28 @@ address {
   font-weight: 400;
   font-size: 14px;
   line-height: 1.71;
+}
+
+.footer-social {
+  margin-top: 12px;
+  margin-left: 70px;
+}
+
+.footer-title {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 1.14;
+  text-transform: uppercase;
+  color: var(--primary-wite-color);
+}
+
+.footer-link {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  color: var(--primary-wite-color);
+}
+
+.footer-section {
+  display: flex;
 }
