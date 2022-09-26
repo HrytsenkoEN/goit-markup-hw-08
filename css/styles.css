@@ -239,17 +239,19 @@
   line-height: 1.14;
 }
 
-.icon-feature {
-  display: block;
-  content: "";
+.feature-bgd {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   height: 120px;
   width: 270px;
-  outline: 1px solid black;
-  margin-bottom: 30px;
-  background-size: 70px;
-  background-repeat: no-repeat;
-  background-position: center;
+  margin-bottom: 30px;  
   background-color: var(--button-bg-color);
+}
+.icon-feature {
+  height: 70px;
+  width: 70px;
+  
 }
 
 .work-list,
