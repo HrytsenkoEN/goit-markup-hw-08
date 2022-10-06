@@ -82,6 +82,7 @@
   font-size: 14px;
   line-height: 1.14;
   text-decoration: none;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .site-auth .link {
@@ -96,11 +97,13 @@
   display: flex;
   flex-direction: row;
   align-items: center;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .icon-contacts {
   margin-right: 10px;
   fill: var(--primary-text-color);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .site-auth .link:hover .icon-contacts {
@@ -109,6 +112,23 @@
 
 .site-nav .link.current {
   color: var(--accent-color);
+}
+
+.link.current {
+  position: relative;
+  }
+
+.link.current::after {
+  content: "";
+
+  position: absolute;
+  bottom: 0;
+
+  display: block;
+  width: 100%;
+  height: 4px;
+  background-color: var(--accent-color);
+  border-radius: 2px;
 }
 
 .site-nav .link:hover,
@@ -224,13 +244,12 @@
   justify-content: center;
   height: 120px;
   width: 270px;
-  margin-bottom: 30px;  
+  margin-bottom: 30px;
   background-color: var(--button-bg-color);
 }
 .icon-feature {
   height: 70px;
   width: 70px;
-  
 }
 
 .work-list,
@@ -305,33 +324,34 @@
 }
 
 .project-element {
-    width: 370px;
+  width: 370px;
   margin-right: 30px;
   margin-bottom: 30px;
   border: 1px solid #eeeeee;
   cursor: pointer;
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .project-overlay {
   position: relative;
+  overflow: hidden;
 }
 
 .overlay-text {
-position: absolute;
-bottom: 0;
-transform: translate(-500);
-transition-duration: 250ms;
-padding: 63px 24px;
-width: 100%;
-height: 100%;
-background-color: rgba(33, 150, 243, 0.9);
-font-weight: 400;
-font-size: 18px;
-line-height: 1.56;
-letter-spacing: 0.03em;
-color: #FFFFFF;
-opacity: 0;
-
+  position: absolute;
+  bottom: 0;
+  transform: translateY(100%);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  padding: 63px 24px;
+  /* width: 100%; */
+  height: 100%;
+  background-color: rgba(33, 150, 243, 0.9);
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.56;
+  letter-spacing: 0.03em;
+  color: #ffffff;
+  opacity: 0;
 }
 
 .overlay-text p {
@@ -435,6 +455,7 @@ opacity: 0;
   text-align: center;
   letter-spacing: 0.06em;
   padding: 10px 32px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .hero .button:hover,
@@ -449,6 +470,9 @@ opacity: 0;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.62;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    text-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .list .button:hover,
@@ -463,6 +487,7 @@ opacity: 0;
   width: 20px;
   height: 20px;
   fill: currentColor;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .social-link {
@@ -475,6 +500,8 @@ opacity: 0;
   border: none;
   padding: 0;
   color: #afb1b8;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border-radius 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .social-list .item + .item {
   margin-left: 10px;
@@ -499,15 +526,16 @@ opacity: 0;
   width: 106px;
   height: 60px;
   fill: #afb1b8;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .btn-clients:hover .btn-icon,
-.btn-clients:focus .btn-icon{
+.btn-clients:focus .btn-icon {
   fill: #2196f3;
 }
 
 .btn-clients:hover,
-.btn-clients:focus{
+.btn-clients:focus {
   border-color: #2196f3;
 }
 
@@ -520,6 +548,7 @@ opacity: 0;
   border: 1px solid #afb1b8;
   border-radius: 4px;
   cursor: pointer;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .clients-list,
@@ -542,12 +571,17 @@ opacity: 0;
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.2);
-  
+  transition: opacity 250ms linear, visibility 250ms linear;
 }
 
 .backdrop.is-hidden {
   opacity: 0;
+  visibility: hidden;
   pointer-events: none;
+}
+
+.backdrop.is-hidden .modal {
+  transform: translate(-50%, -50%) scaleY(0);
 }
 
 .modal {
@@ -559,6 +593,8 @@ opacity: 0;
   min-height: 581px;
   border-radius: 4px;
   background-color: var(--primary-wite-color);
+  transform: translate(-50%, -50%) scaleY(1);
+  transition: transform 250ms linear;
 }
 
 .modal-close {
