@@ -615,6 +615,10 @@
   color: rgba(0, 0, 0, 0.1);
 }
 
+.icon-close {
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 .modal-close:hover .icon-close{
   fill: var(--accent-color);
 }
@@ -715,7 +719,7 @@ li .footer-item :nth-child(1) {
   width: 358px;
   height: 50px;
   border: 1px solid rgba(255, 255, 255, 0.3);
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  /* filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15)); */
   border-radius: 4px;
   background-color: var(--secondary-background-color);
   padding-top: 15px;
@@ -732,11 +736,13 @@ li .footer-item :nth-child(1) {
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
   cursor: pointer;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .form-field input:hover,
 .form-field input:focus {
   border-color: var(--accent-color);
+  Outline: none;
 }
 
 .form-field input:hover ~ .icon-modal,
@@ -750,8 +756,10 @@ li .footer-item :nth-child(1) {
   font-size: 12px;
   line-height: 1.16;
   letter-spacing: 0.01em;
-  /*  */
-  
+}
+
+.form-field textarea:focus {
+  Outline: none;
 }
 
 .checkbox-link {
@@ -802,8 +810,9 @@ li .footer-item :nth-child(1) {
   position: absolute;
   bottom: 11px;
   left: 12px;
-  /* transform: translateY(-50%); */
   display: inline-block;
+  color: var(--title-text-color);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-item .button {
@@ -817,3 +826,65 @@ display: flex;
   margin-bottom: 13px;
   margin-left: 10px;
 }
+
+.label-checkbox input {
+  border: none;
+}
+
+.checkbox {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.label-checkbox {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.icon-checkbox {
+  display: inline-block;
+  width: 16px;
+  height: 15px;
+  margin-right: 7px;
+
+  border: 2px solid var(--title-text-color);
+  border-radius: 2px;
+}
+
+.checkbox:checked + .icon-checkbox {
+  border-color: transparent;
+  background-image: url(../images/iconcheck.svg);
+  background-size: contain;
+  background-origin: border-box;
+}
+
+
+
+/* .checkbox:checked ~ .custom-check {
+  z-index: 0;
+}
+
+.custom {
+  position: relative;
+}
+
+.custom-check {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.custom-check :nth-child(1) {
+  z-index: 1;
+}
+
+.custom-check :nth-child(2) {
+  z-index: 2;
+} */
