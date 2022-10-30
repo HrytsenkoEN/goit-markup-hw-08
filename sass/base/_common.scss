@@ -1,0 +1,37 @@
+.page {
+    background-color: var(--primary-wite-color);
+    color: var(--primary-text-color);
+    font-family: "Roboto", sans-serif;
+    letter-spacing: 0.03em;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.71;
+}
+
+.link {
+    letter-spacing: 0.02em;
+}
+
+.bgc {
+    background-color: var(--button-bg-color);
+}
+
+.list,
+.projects-list,
+.feature-list,
+.work-list,
+.team-list,
+.footer-list,
+.clients-list,
+.footer-section {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.work-list,
+.team-list,
+.projects-list {
+    display: flex;
+    flex-wrap: wrap;
+}

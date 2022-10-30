@@ -1,7 +1,21 @@
 @import './utils/vars';
 @import './base/reset';
+@import './base/common';
 
 @import './components/container';
+@import './components/btn';
+@import './components/section';
+@import './components/section';
+@import './components/overlay';
+@import './components/modal';
 
 @import './layouts/header';
 @import './layouts/hero';
+@import './layouts/project';
+@import './layouts/social';
+@import './layouts/team';
+@import './layouts/clients';
+@import './layouts/feature';
+@import './layouts/work';
+@import './layouts/footer';
+@import './layouts/_footer-form';

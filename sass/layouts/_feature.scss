@@ -1,0 +1,29 @@
+.feature-list .title {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+}
+
+.feature-bgd {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 120px;
+    width: 270px;
+    margin-bottom: 30px;
+    background-color: var(--button-bg-color);
+}
+
+.icon-feature {
+    height: 70px;
+    width: 70px;
+}
+
+.feature-list {
+    display: flex;
+}
+
+.feature-element {
+    width: 270px;
+    margin-right: 30px;
+}

@@ -1,0 +1,40 @@
+.section {
+    padding-top: 94px;
+    padding-bottom: 94px;
+}
+
+.section.no-padding {
+    padding-top: 94;
+    padding-bottom: 0;
+}
+
+.section .title {
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: var(--title-text-color);
+}
+
+.section .name {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.18;
+    text-align: center;
+}
+
+.section .work,
+.section .team,
+.section .clients {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.16;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-project {
+    width: 1200px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
