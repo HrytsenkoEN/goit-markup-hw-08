@@ -3,6 +3,9 @@
     width: 370px;
     height: 294px;
     margin-right: 30px;
+    &:nth-child(3n) {
+        margin-right: 0;
+    }
 }
 
 .work-text {
