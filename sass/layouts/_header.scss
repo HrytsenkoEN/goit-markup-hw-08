@@ -1,6 +1,5 @@
 .logo {
     display: block;
-    color: var(--primary-black-color);
     font-family: "Releway", sans-serif;
     font-weight: 700;
     font-size: 26px;
@@ -8,18 +7,22 @@
     text-decoration: none;
 }
 
-.logo-nav {
+.logo--black {
+    color: var(--primary-black-color);
+}
+
+.navigation__logo {
     margin-right: 93px;
 }
 
-.logo .web {
+.logo__web {
     color: var(--accent-color);
 }
 
-.site-nav,
-.site-auth,
-.main-nav,
-.page-header {
+.menu,
+.connect,
+.navigation,
+.header {
     display: flex;
     align-items: center;
 }
@@ -28,16 +31,16 @@
     border: 1px solid var(--header-border-color);
 }
 
-.site-nav .item+.item,
-.site-auth .item+.item {
+.menu__item +.item,
+.connect__item +.item {
     margin-left: 50px;
 }
 
-.site-auth {
+.connect {
     margin-left: auto;
 }
 
-.site-nav .link {
+.menu__link {
     padding-top: 32px;
     padding-bottom: 32px;
     color: var(--title-text-color);
@@ -50,12 +53,12 @@
     &:focus {
         color: var(--accent-color);
     }
-    &.current {
+    &-current {
         color: var(--accent-color);
     }
 }
 
-.site-auth .link {
+.connect__link {
     display: block;
     padding-top: 32px;
     padding-bottom: 32px;
@@ -74,16 +77,16 @@
     }
 }
 
-.icon-contacts {
+.connect__icon {
     margin-right: 10px;
     fill: var(--primary-text-color);
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    .site-auth .link:hover & {
+    .connect__link:hover & {
         fill: var(--accent-color);
     }
 }
 
-.link.current {
+.menu__link-current {
     position: relative;
     &::after {
         content: "";
@@ -96,4 +99,3 @@
         border-radius: 2px;
     }
 }
-

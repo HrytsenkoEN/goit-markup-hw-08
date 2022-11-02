@@ -4,7 +4,7 @@ footer {
     padding-bottom: 60px;
 }
 
-.footer-logo {
+.logo--wite {
     color: var(--primary-wite-color);
     margin-bottom: 20px;
 }
@@ -48,13 +48,17 @@ li .footer-item :nth-child(1) {
     color: var(--primary-wite-color);
 }
 
-.footer-link {
-    background-color: rgba(255, 255, 255, 0.1);
-    border-radius: 50%;
-    color: var(--primary-wite-color);
-}
+// .footer-link {
+//     background-color: rgba(255, 255, 255, 0.1);
+//     border-radius: 50%;
+//     color: var(--primary-wite-color);
+// }
 
 .footer-section {
     display: flex;
 }
 
+.soc__link--wite {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: var(--primary-wite-color);
+}
