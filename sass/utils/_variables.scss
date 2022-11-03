@@ -9,3 +9,10 @@
     --primary-bg-color: #f5f5f5;
     --header-border-color: #ececec;
 }
+
+@mixin font($fw, $fs, $lh, $ls) {
+    font-weight: $fw;
+    font-size: $fs;
+    line-height: $lh;
+    letter-spacing: $ls;
+}

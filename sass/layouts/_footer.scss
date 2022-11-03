@@ -11,9 +11,7 @@ footer {
 
 .footer-list .link {
     color: var(--primary-text-color);
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 1.14;
+    @include font(500, 14px, 1.14, null);
     text-decoration: none;
 }
 
@@ -24,9 +22,7 @@ address {
 
 .footer-list .info {
     color: rgba(255, 255, 255, 0.6);
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 1.71;
+    @include font(400, 14px, 1.71, null);
 }
 
 li .footer-item :nth-child(1) {
@@ -40,19 +36,10 @@ li .footer-item :nth-child(1) {
 
 .footer-title {
     margin-bottom: 20px;
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 16px;
-    letter-spacing: 1.14;
+    @include font(700, 16px, 1.14, 0.03em);
     text-transform: uppercase;
     color: var(--primary-wite-color);
 }
-
-// .footer-link {
-//     background-color: rgba(255, 255, 255, 0.1);
-//     border-radius: 50%;
-//     color: var(--primary-wite-color);
-// }
 
 .footer-section {
     display: flex;

@@ -17,13 +17,14 @@
 }
 
 .work-list__title {
+    @include font(700, 14px, 1.14, 0.03em);
     margin: 0;
     padding-top: 27px;
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 1.14;
+    // font-weight: 700;
+    // font-size: 14px;
+    // line-height: 1.14;
     text-align: center;
-    letter-spacing: 0.03em;
+    // letter-spacing: 0.03em;
     text-transform: uppercase;
 
     color: var(--primary-wite-color);
