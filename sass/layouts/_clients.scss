@@ -25,12 +25,30 @@
     }
 }
 
-.clients-list,
-.soc {
+.clients-list {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
+    gap: 30px;
+    @media screen and (min-width: 1200px) {
+        flex-wrap: nowrap;
+        }
 }
 
-.clients-list .item+.item {
-    margin-left: 30px;
+
+
+// .clients-list .item+.item {
+//     margin-left: 30px;
+// }
+
+.clients-list.item {
+    width: calc((100% - 30px) / 2);
+
+    @media screen and (min-width: 768px) {
+    width: calc((100% - 60px) / 3);
+    }
+    
+    @media screen and (min-width: 1200px) {
+        width: calc((100% - 150px) / 4);
+    }
 }

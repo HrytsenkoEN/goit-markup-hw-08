@@ -6,3 +6,11 @@
 .overlay-text p {
     margin: 0;
 }
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    // тимчасово
+    width: 100%;
+}

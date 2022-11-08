@@ -29,9 +29,14 @@
     list-style: none;
 }
 
-.work-list,
+// .work-list,
 .team-list,
 .projects-list {
     display: flex;
     flex-wrap: wrap;
+    gap: 30px;
+}
+
+.no-scroll {
+    overflow: hidden;
 }
