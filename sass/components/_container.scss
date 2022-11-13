@@ -7,11 +7,16 @@
 }
 
 .container .btn-list {
+    // display: none;
     display: flex;
     justify-content: center;
     padding: 0;
     margin-bottom: 50px;
     list-style: none;
+    @media screen and (max-width: 768px) {
+        flex-wrap: wrap;
+        justify-content: left;
+    }
 }
 
 .main-container {

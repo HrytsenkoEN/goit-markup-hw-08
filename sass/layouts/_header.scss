@@ -1,60 +1,98 @@
 .logo {
     display: block;
     font-family: "Releway", sans-serif;
-    // @include font(700, 26px, 1.19, null);
     @include font(700, 24px, 1.16, null);
     text-decoration: none;
+    @media screen and (min-width: 1200px) {
+        @include font(700, 26px, 1.19, null);
+        }
 }
 
 .logo--black {
     color: var(--primary-black-color);
 }
 
-// .navigation__logo {
-//     margin-right: 93px;
-// }
+.navigation__logo {
+    margin-right: 93px;
+}
 
 .logo__web {
     color: var(--accent-color);
 }
 
-.menu,
-.connect {
+.menu {
     display: none;
     align-items: center;
+    @media screen and (min-width: 768px) {
+            display: flex;
+        }
 }
 
-// .navigation {
-//     display: flex;
-//     align-items: center;
-// }
+.navigation {
+    @media screen and (min-width: 768px) {
+            display: flex;
+            align-items: center;
+        }
+}
 
 .header {
-    
     display: flex;
     align-items: center;
     flex-wrap: nowrap;
     gap: 30px;
-    @media screen and (min-width: 768px) {
-            width: 738px;
-        }
+    // @media screen and (min-width: 768px) {
+    //         width: 738px;
+    //     }
     
-        @media screen and (min-width: 1200px) {
-            width: auto;
-        }
+    @media screen and (min-width: 1200px) {
+        width: auto;
+    }
+}
+
+.header>.container {
+    display: flex;
+    align-items: center;
+
+    // @media screen and (min-width: 480px) {
+    //     display: flex;
+    //     align-items: center;
+    // }
+    // @media screen and (min-width: 768px) {
+    //     display: flex;
+    // }
 }
 
 .border-heder {
     border: 1px solid var(--header-border-color);
 }
 
-.menu__item +.item,
-.connect__item +.item {
+.menu__item +.item {
     margin-left: 50px;
 }
 
+.connect__item+.item {
+    @media screen and (min-width: 768px) {
+        margin-left: auto;
+        padding-top: 10px;
+    }
+    @media screen and (min-width: 1200px) {
+        margin-left: 50px;
+        padding: 0;
+    }
+}
+
 .connect {
+    display: none;
+    @media screen and (min-width: 768px) {
+    display: block;
     margin-left: auto;
+    padding-top: 21px;
+    padding-bottom: 21px;
+    }
+    @media screen and (min-width: 1200px) {
+        display: flex;
+        padding: 0;
+    }
 }
 
 .menu__link {
@@ -75,8 +113,6 @@
 
 .connect__link {
     display: block;
-    padding-top: 32px;
-    padding-bottom: 32px;
     color: var(--primary-text-color);
     @include font(500, 14px, 1.14, null);
     text-decoration: none;
@@ -87,6 +123,10 @@
     &:hover,
     &:focus {
         color: var(--accent-color);
+    }
+    @media screen and (min-width: 1200px) {
+        padding-top: 32px;
+        padding-bottom: 32px;
     }
 }
 
@@ -114,15 +154,14 @@
 }
 
 .menu__open-btn {
-    // position: absolute;
-    // top: 10px;
-    // right: 10px;
-    // margin-left: auto;
     width: 40px;
     height: 40px;
     background-color: transparent;
     border: none;
     margin: 10px 0 10px auto;
+    @media screen and (min-width: 768px) {
+        display: none;
+    }
 }
 
 .mob-menu {

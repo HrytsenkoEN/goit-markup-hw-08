@@ -19,22 +19,20 @@
   </head>
   <body class="page">
     <div class="border-heder">
-      <div class="container">
-        <header class="header">
+      <header class="header">
+        <div class="container">
           <nav class="navigation">
             <div class="navigation__logo">
-              <a href="./" class="logo logo--black"> <span class="logo__web">Web</span>Studio </a>
+              <a href="./" class="logo logo--black">
+                <span class="logo__web">Web</span>Studio
+              </a>
             </div>
             <ul class="menu list">
               <li class="menu__item item">
                 <a href="./index.html" class="menu__link link">Студія</a>
               </li>
               <li class="menu__item item">
-                <a
-                  href="./portfolio.html"
-                  class="menu__link link menu__link-current"
-                  >Портфоліо</a
-                >
+                <a href="./portfolio.html" class="menu__link link menu__link-current">Портфоліо</a>
               </li>
               <li class="menu__item item">
                 <a href="" class="menu__link link">Контакти</a>
@@ -43,24 +41,74 @@
           </nav>
           <ul class="connect list">
             <li class="connect__item item">
-              <a class="connect__link link" href="mailto:info@devstudio.com"
-                ><svg class="connect__icon" width="16" height="12">
+              <a class="connect__link link" href="mailto:info@devstudio.com"><svg class="connect__icon" width="16"
+                  height="12">
                   <use href="./images/icons.svg#envelope"></use>
                 </svg>
-                info@devstudio.com</a
-              >
+                info@devstudio.com</a>
             </li>
             <li class="connect__item item">
-              <a class="connect__link link" href="tel:+380961111111"
-                ><svg class="connect__icon" width="10" height="16">
+              <a class="connect__link link" href="tel:+380961111111"><svg class="connect__icon" width="10" height="16">
                   <use href="./images/icons.svg#smartphone"></use>
                 </svg>
-                +38 096 111 11 11</a
-              >
+                +38 096 111 11 11</a>
             </li>
           </ul>
-        </header>
-      </div>
+          <button type="button" class="menu__open-btn" data-menu-open>
+            <svg class="icon-open-btn" width="40" height="40">
+              <use href="./images/icons.svg#menu24px"></use>
+            </svg>
+          </button>
+          <div class="mob-menu is-hidden" data-menu>
+            <div class="container">
+              <button type="button" class="menu__close-btn" data-menu-close>
+                <svg class="icon-close-btn" width="40" height="40">
+                  <use href="./images/icons.svg#close24px"></use>
+                </svg>
+              </button>
+              <div class="mob-menu-top">
+                <ul class="mob-menu-list list">
+                  <li class="mob-menu__item item">
+                    <a href="./index.html" class="mob-menu__link link">Студія</a>
+                  </li>
+                  <li class="mob-menu__item item">
+                    <a href="./portfolio.html" class="mob-menu__link link mob-menu__link-current">Портфоліо</a>
+                  </li>
+                  <li class="mob-menu__item item">
+                    <a href="" class="mob-menu__link link">Контакти</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="mob-menu-bottom">
+                <ul class="mob-connect list">
+                  <li class="mob-connect__item item">
+                    <a class="mob-connect__tel link" href="tel:+380961111111">
+                      +38 096 111 11 11</a>
+                  </li>
+                  <li class="mob-connect__item item">
+                    <a class="mob-connect__mail link" href="mailto:info@devstudio.com">
+                      info@devstudio.com</a>
+                  </li>
+                </ul>
+                <ul class="mob-soc list">
+                  <li class="mob-soc__item item">
+                    <a href="" class="mob-soc__link">instagram</a>
+                  </li>
+                  <li class="mob-soc__item item">
+                    <a href="" class="mob-soc__link">twitter</a>
+                  </li>
+                  <li class="mob-soc__item item">
+                    <a href="" class="mob-soc__link">facebook</a>
+                  </li>
+                  <li class="mob-soc__item item">
+                    <a href="" class="mob-soc__link">linkedin</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
     </div>
 
     <main class="main-container">
@@ -91,12 +139,21 @@
             <li class="project-element">
               <a href="">
                 <div class="project-overlay">
-                  <img
-                    src="./images/project1.jpg"
-                    alt="laptop"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source srcset="
+                        ./images/project/project1.jpg        1x,
+                        ./images/project/project1-2x.jpg 2x
+                      " media="(min-width: 1200px)" />
+                    <source srcset="
+                        ./images/project/tab/project1-tab.jpg        1x,
+                        ./images/project/tab/project1-tab-2x.jpg 2x
+                      " media="(min-width: 768px)" />
+                    <source srcset="
+                        ./images/project/mob/project1-mob.jpg        1x,
+                        ./images/project/mob/project1-mob-2x.jpg 2x
+                      " media="(min-width: 480px)" />
+                    <img src="./images/project/project1.jpg" alt="laptop" />
+                  </picture>
                   <div class="overlay-text">
                     <p>
                       Ресурс пропонує комплексні пропозиції з різним рівнем
@@ -115,11 +172,21 @@
             <li class="project-element">
               <a href="">
                 <div class="project-overlay">
-                  <img
-                    src="./images/project2.jpg"
-                    alt="poster basketball players"
-                    width="370"
-                  />
+                  <picture>
+                    <source srcset="
+                      ./images/project/project2.jpg        1x,
+                      ./images/project/project2-2x.jpg 2x
+                      " media="(min-width: 1200px)" />
+                    <source srcset="
+                      ./images/project/tab/project2-tab.jpg        1x,
+                      ./images/project/tab/project2-tab-2x.jpg 2x
+                      " media="(min-width: 768px)" />
+                    <source srcset="
+                      ./images/project/mob/project2-mob.jpg        1x,
+                      ./images/project/mob/project2-mob-2x.jpg 2x
+                      " media="(min-width: 480px)" />
+                    <img src="./images/project/project2.jpg" alt="poster basketball players" />
+                  </picture>
                   <div class="overlay-text">
                     <p>
                       Ресурс пропонує комплексні пропозиції з різним рівнем
@@ -138,11 +205,21 @@
             <li class="project-element">
               <a href="">
                 <div class="project-overlay">
-                  <img
-                    src="./images/project3.jpg"
-                    alt="logo restaurant Seafood"
-                    width="370"
-                  />
+                  <picture>
+                    <source srcset="
+                      ./images/project/project3.jpg        1x,
+                      ./images/project/project3-2x.jpg 2x
+                    " media="(min-width: 1200px)" />
+                    <source srcset="
+                      ./images/project/tab/project3-tab.jpg        1x,
+                      ./images/project/tab/project3-tab-2x.jpg 2x
+                    " media="(min-width: 768px)" />
+                    <source srcset="
+                      ./images/project/mob/project3-mob.jpg        1x,
+                      ./images/project/mob/project3-mob-2x.jpg 2x
+                    " media="(min-width: 480px)" />
+                    <img src="./images/project/project3.jpg" alt="logo restaurant Seafood" />
+                  </picture>
                   <div class="overlay-text">
                     <p>
                       Ресурс пропонує комплексні пропозиції з різним рівнем
@@ -161,11 +238,21 @@
             <li class="project-element">
               <a href="">
                 <div class="project-overlay">
-                  <img
-                    src="./images/project4.jpg"
-                    alt="headphones"
-                    width="370"
-                  />
+                  <picture>
+                    <source srcset="
+                      ./images/project/project4.jpg        1x,
+                      ./images/project/project4-2x.jpg 2x
+                    " media="(min-width: 1200px)" />
+                    <source srcset="
+                      ./images/project/tab/project4-tab.jpg        1x,
+                      ./images/project/tab/project4-tab-2x.jpg 2x
+                    " media="(min-width: 768px)" />
+                    <source srcset="
+                      ./images/project/mob/project4-mob.jpg        1x,
+                      ./images/project/mob/project4-mob-2x.jpg 2x
+                    " media="(min-width: 480px)" />
+                    <img src="./images/project/project4.jpg" alt="headphones" />
+                  </picture>
                   <div class="overlay-text">
                     <p>
                       Ресурс пропонує комплексні пропозиції з різним рівнем
@@ -184,11 +271,21 @@
             <li class="project-element">
               <a href="">
                 <div class="project-overlay">
-                  <img
-                    src="./images/project5.jpg"
-                    alt="carton boxes"
-                    width="370"
-                  />
+                  <picture>
+                    <source srcset="
+                      ./images/project/project5.jpg        1x,
+                      ./images/project/project5-2x.jpg 2x
+                    " media="(min-width: 1200px)" />
+                    <source srcset="
+                      ./images/project/tab/project5-tab.jpg        1x,
+                      ./images/project/tab/project5-tab-2x.jpg 2x
+                    " media="(min-width: 768px)" />
+                    <source srcset="
+                      ./images/project/mob/project5-mob.jpg        1x,
+                      ./images/project/mob/project5-mob-2x.jpg 2x
+                    " media="(min-width: 480px)" />
+                    <img src="./images/project/project5.jpg" alt="carton boxes" />
+                  </picture>
                   <div class="overlay-text">
                     <p>
                       Ресурс пропонує комплексні пропозиції з різним рівнем
@@ -207,7 +304,21 @@
             <li class="project-element">
               <a href="">
                 <div class="project-overlay">
-                  <img src="./images/project6.jpg" alt="monitor " width="370" />
+                  <picture>
+                    <source srcset="
+                      ./images/project/project6.jpg        1x,
+                      ./images/project/project6-2x.jpg 2x
+                    " media="(min-width: 1200px)" />
+                    <source srcset="
+                      ./images/project/tab/project6-tab.jpg        1x,
+                      ./images/project/tab/project6-tab-2x.jpg 2x
+                    " media="(min-width: 768px)" />
+                    <source srcset="
+                      ./images/project/mob/project6-mob.jpg        1x,
+                      ./images/project/mob/project6-mob-2x.jpg 2x
+                    " media="(min-width: 480px)" />
+                    <img src="./images/project/project6.jpg" alt="monitor " />
+                  </picture>
                   <div class="overlay-text">
                     <p>
                       Ресурс пропонує комплексні пропозиції з різним рівнем
@@ -226,7 +337,21 @@
             <li class="project-element">
               <a href="">
                 <div class="project-overlay">
-                  <img src="./images/project7.jpg" alt="book" width="370" />
+                  <picture>
+                    <source srcset="
+                      ./images/project/project7.jpg        1x,
+                      ./images/project/project7-2x.jpg 2x
+                    " media="(min-width: 1200px)" />
+                    <source srcset="
+                      ./images/project/tab/project7-tab.jpg        1x,
+                      ./images/project/tab/project7-tab-2x.jpg 2x
+                    " media="(min-width: 768px)" />
+                    <source srcset="
+                      ./images/project/mob/project7-mob.jpg        1x,
+                      ./images/project/mob/project7-mob-2x.jpg 2x
+                    " media="(min-width: 480px)" />
+                    <img src="./images/project/project7.jpg" alt="book" />
+                  </picture>
                   <div class="overlay-text">
                     <p>
                       Ресурс пропонує комплексні пропозиції з різним рівнем
@@ -245,11 +370,21 @@
             <li class="project-element">
               <a href="">
                 <div class="project-overlay">
-                  <img
-                    src="./images/project8.jpg"
-                    alt="paper lable"
-                    width="370"
-                  />
+                  <picture>
+                    <source srcset="
+                      ./images/project/project8.jpg        1x,
+                      ./images/project/project8-2x.jpg 2x
+                    " media="(min-width: 1200px)" />
+                    <source srcset="
+                      ./images/project/tab/project8-tab.jpg        1x,
+                      ./images/project/tab/project8-tab-2x.jpg 2x
+                    " media="(min-width: 768px)" />
+                    <source srcset="
+                      ./images/project/mob/project8-mob.jpg        1x,
+                      ./images/project/mob/project8-mob-2x.jpg 2x
+                    " media="(min-width: 480px)" />
+                    <img src="./images/project/project8.jpg" alt="paper lable" />
+                  </picture>
                   <div class="overlay-text">
                     <p>
                       Ресурс пропонує комплексні пропозиції з різним рівнем
@@ -268,7 +403,21 @@
             <li class="project-element">
               <a href="">
                 <div class="project-overlay">
-                  <img src="./images/project9.jpg" alt="laptop" width="370" />
+                  <picture>
+                    <source srcset="
+                      ./images/project/project9.jpg        1x,
+                      ./images/project/project9-2x.jpg 2x
+                    " media="(min-width: 1200px)" />
+                    <source srcset="
+                      ./images/project/tab/project9-tab.jpg        1x,
+                      ./images/project/tab/project9-tab-2x.jpg 2x
+                    " media="(min-width: 768px)" />
+                    <source srcset="
+                      ./images/project/mob/project9-mob.jpg        1x,
+                      ./images/project/mob/project9-mob-2x.jpg 2x
+                    " media="(min-width: 480px)" />
+                    <img src="./images/project/project9.jpg" alt="laptop" />
+                  </picture>
                   <div class="overlay-text">
                     <p>
                       Ресурс пропонує комплексні пропозиції з різним рівнем
@@ -291,6 +440,81 @@
     </main>
 
     <footer>
+      <div class="container">
+        <ul class="footer-section">
+          <div class="footer-item768">
+            <li class="footer-item">
+              <a href="./" class="logo logo--wite">
+                <span class="logo__web">Web</span>Studio </a>
+              <address>
+                <ul class="footer-list">
+                  <li>м. Київ, пр-т Лесі Українки, 26</li>
+                  <li>
+                    <a href="mailto:info@devstudio.com" class="info link">info@devstudio.com</a>
+                  </li>
+                  <li>
+                    <a href="tel:+380961111111" class="info link">+38 096 111 11 11</a>
+                  </li>
+                </ul>
+              </address>
+            </li>
+            <li class="footer-item">
+              <div class="footer-social">
+                <h3 class="footer-title">приєднуйтесь</h3>
+                <ul class="soc list">
+                  <li class="soc__item item">
+                    <a href="" class="soc__link soc__link--wite">
+                      <svg class="soc__icon">
+                        <use href="./images/icons.svg#instagram"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="soc__item item">
+                    <a href="" class="soc__link soc__link--wite">
+                      <svg class="soc__icon">
+                        <use href="./images/icons.svg#twitter"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="soc__item item">
+                    <a href="" class="soc__link soc__link--wite">
+                      <svg class="soc__icon">
+                        <use href="./images/icons.svg#facebook"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="soc__item item">
+                    <a href="" class="soc__link soc__link--wite">
+                      <svg class="soc__icon">
+                        <use href="./images/icons.svg#linkedin"></use>
+                      </svg>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+          </div>
+    
+          <li class="footer-item">
+            <div class="footer-form">
+              <p class="footer-title">Підпишіться на розсилку</p>
+              <form class="footer-field">
+                <label for="footer-input"></label>
+                <input class="footer-input" type="email" placeholder="E-mail" id="footer-input" name="footer-input" />
+                <button type="submit" class="button">
+                  Підписатися
+                  <svg class="icon-footer" width="24" height="24">
+                    <use href="./images/icons.svg#iconsend"></use>
+                  </svg>
+                </button>
+              </form>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </footer>
+
+    <!-- <footer>
       <div class="container">
         <ul class="footer-section">
           <li class="footer-item">
@@ -369,6 +593,7 @@
           </li>
         </ul>
       </div>
-    </footer>
+    </footer> -->
+    <script src="./js/menu.js"></script>
   </body>
 </html>
