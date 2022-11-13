@@ -1,19 +1,19 @@
 .page {
-    background-color: var(--primary-wite-color);
-    color: var(--primary-text-color);
-    font-family: "Roboto", sans-serif;
-    letter-spacing: 0.03em;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 1.71;
+  background-color: var(--primary-wite-color);
+  color: var(--primary-text-color);
+  font-family: "Roboto", sans-serif;
+  letter-spacing: 0.03em;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.71;
 }
 
 .link {
-    letter-spacing: 0.02em;
+  letter-spacing: 0.02em;
 }
 
 .bgc {
-    background-color: var(--button-bg-color);
+  background-color: var(--button-bg-color);
 }
 
 .list,
@@ -24,19 +24,18 @@
 .footer-list,
 .clients-list,
 .footer-section {
-    padding: 0;
-    margin: 0;
-    list-style: none;
+  padding: 0;
+  margin: 0;
+  list-style: none;
 }
 
-// .work-list,
 .team-list,
 .projects-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
 }
 
 .no-scroll {
-    overflow: hidden;
+  overflow: hidden;
 }
