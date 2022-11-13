@@ -199,19 +199,36 @@ img {
 }
 
 .section .title {
+  text-align: center;
   margin-top: 0;
   margin-bottom: 10px;
   color: var(--title-text-color);
+}
+@media screen and (min-width: 1200px) {
+  .section .title {
+    text-align: left;
+  }
 }
 
 .section .work,
 .section .team,
 .section .clients {
   font-weight: 700;
-  font-size: 36px;
+  font-size: 28px;
   line-height: 1.16;
   text-align: center;
   margin-bottom: 50px;
+}
+@media screen and (min-width: 1200px) {
+  .section .work,
+.section .team,
+.section .clients {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.16;
+    text-align: center;
+    margin-bottom: 50px;
+  }
 }
 
 .section-project {
@@ -582,7 +599,7 @@ img {
   display: block;
   color: var(--primary-text-color);
   font-weight: 500;
-  font-size: 14px;
+  font-size: 12px;
   line-height: 1.14;
   text-decoration: none;
   display: flex;
@@ -597,6 +614,9 @@ img {
   .connect__link {
     padding-top: 32px;
     padding-bottom: 32px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
   }
 }
 
@@ -1073,15 +1093,9 @@ footer {
   padding-bottom: 60px;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   .footer-item {
     width: 100%;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  li .footer-item :nth-child(1) {
-    width: 231px;
   }
 }
 
